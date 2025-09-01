@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Kamogelo Retail — Trending Imports to South Africa</title>
+  <meta name="description" content="Kamogelo Retail imports trending products from China to South Africa. Delivery in 15–20 working days. Order easily on WhatsApp." />
+  <link rel="icon" href="assets/favicon.png">
+  <meta name="theme-color" content="#0f172a">
+  <!-- Open Graph -->
+  <meta property="og:title" content="Kamogelo Retail" />
+  <meta property="og:description" content="Trending imports to South Africa. Delivery in 15–20 working days." />
+  <meta property="og:image" content="assets/social-card.jpg" />
+  <style>
+    :root{
+      --bg:#0b1020;          /* deep navy */
+      --card:#11182f;
+      --muted:#93a4c9;
+      --text:#e8ecf9;
+      --accent:#4ade80;      /* fresh green */
+      --accent-2:#22c55e;
+      --brand:#e2e8f0;
+      --warn:#f59e0b;
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;background:linear-gradient(180deg,#0b1020 0%,#0b1020 40%,#0e1530 100%);color:var(--text);font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;scroll-behavior:smooth}
+    a{color:inherit;text-decoration:none}
+    .container{max-width:1100px;margin:0 auto;padding:0 20px}
+    header{position:sticky;top:0;backdrop-filter:saturate(1.4) blur(10px);background:rgba(11,16,32,.65);border-bottom:1px solid rgba(255,255,255,.06);z-index:50}
+    .nav{display:flex;align-items:center;justify-content:space-between;padding:14px 0}
+    .brand{display:flex;gap:12px;align-items:center}
+    .brand img{height:36px;width:auto;border-radius:6px;object-fit:cover;background:#fff}
+    .brand h1{font-size:1.05rem;margin:0;letter-spacing:.4px}
+    .nav a.btn{padding:10px 14px;border:1px solid rgba(255,255,255,.12);border-radius:10px;transition:transform .15s,background .15s,border-color .15s}
+    .nav a.btn:hover{transform:translateY(-2px);border-color:rgba(255,255,255,.28)}
+    .cta{background:linear-gradient(90deg,var(--accent),var(--accent-2));color:#0b1020;border:none}
+    /* hero */
+    .hero{padding:64px 0 36px}
+    .hero-wrap{display:grid;grid-template-columns:1.2fr .8fr;gap:28px;align-items:center}
+    .badge{display:inline-flex;gap:8px;align-items:center;background:rgba(74,222,128,.12);border:1px solid rgba(74,222,128,.35);color:#d1fae5;padding:6px 10px;border-radius:999px;font-size:.875rem}
+    .h-title{font-size:clamp(1.8rem,3.6vw,3rem);line-height:1.1;margin:14px 0 10px}
+    .h-sub{color:var(--muted);font-size:1.05rem;margin:0 0 18px}
+    .chips{display:flex;flex-wrap:wrap;gap:10px;margin:10px 0 24px}
+    .chip{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08);padding:8px 12px;border-radius:999px;color:#cbd5e1;font-size:.9rem}
+    .card{background:var(--card);border:1px solid rgba(255,255,255,.06);border-radius:16px;box-shadow:0 10px 30px rgba(0,0,0,.25)}
+    .phone{aspect-ratio:3/4;border-radius:20px;overflow:hidden}
+    .phone img{width:100%;height:100%;object-fit:cover;filter:saturate(1.05) contrast(1.05)}
+    /* referral bar */
+    .referral{margin:18px 0 0;padding:10px;border:1px dashed rgba(74,222,128,.45);border-radius:12px;background:rgba(74,222,128,.09)}
+    .referral form{display:flex;gap:8px;flex-wrap:wrap}
+    .referral input,.referral button{padding:10px 12px;border-radius:10px;border:1px solid rgba(255,255,255,.12);background:#0f172a;color:var(--text)}
+    .referral button{background:linear-gradient(90deg,var(--accent),var(--accent-2));border:none;color:#05210f;font-weight:600}
+    .tiny{color:#a8b3cf;font-size:.85rem}
+    /* sections */
+    section{padding:44px 0}
+    .sec-title{font-size:1.6rem;margin:0 0 14px}
+    .grid{display:grid;gap:18px}
+    .products{grid-template-columns:repeat(3,1fr)}
+    .product{display:flex;flex-direction:column}
+    .product .p-img{aspect-ratio:1/1;border-radius:12px;overflow:hidden;background:#0d1226}
+    .p-img img{width:100%;height:100%;object-fit:cover}
+    .p-body{padding:12px}
+    .p-title{margin:0 0 6px;font-weight:600}
+    .price{display:flex;align-items:baseline;gap:8px}
+    .price b{font-size:1.1rem}
+    .badge-warn{font-size:.8rem;color:#fef3c7;background:rgba(245,158,11,.15);padding:6px 8px;border-radius:8px;border:1px solid rgba(245,158,11,.35)}
+    .p-actions{margin-top:auto;display:flex;gap:8px}
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:10px 12px;border-radius:10px;border:1px solid rgba(255,255,255,.12);cursor:pointer}
+    .btn.primary{background:linear-gradient(90deg,var(--accent),var(--accent-2));color:#05210f;border:none;font-weight:700}
+    .btn.ghost:hover{background:rgba(255,255,255,.06)}
+    /* info cards */
+    .info-grid{grid-template-columns:repeat(3,1fr)}
+    .info-card{padding:16px}
+    .info-card h4{margin:0 0 6px}
+    /* faq */
+    details{border:1px solid rgba(255,255,255,.08);border-radius:10px;padding:12px;background:#0d142a}
+    summary{cursor:pointer;font-weight:600}
+    /* footer */
+    footer{border-top:1px solid rgba(255,255,255,.08);padding:28px 0;color:#99a6c7}
+    .foot{display:flex;flex-wrap:wrap;gap:16px;align-items:center;justify-content:space-between}
+    .links{display:flex;gap:14px;flex-wrap:wrap}
+    .legal a{opacity:.8}
+    /* responsive */
+    @media (max-width:960px){
+      .hero-wrap{grid-template-columns:1fr}
+      .products{grid-template-columns:repeat(2,1fr)}
+      .info-grid{grid-template-columns:1fr 1fr}
+    }
+    @media (max-width:620px){
+      .products{grid-template-columns:1fr}
+      .nav a.hide-sm{display:none}
+    }
+  </style>
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Store",
+    "name":"Kamogelo Retail",
+    "description":"Trending imports to South Africa. Delivery in 15–20 working days.",
+    "areaServed":"ZA",
+    "url":"https://example.com",
+    "brand":{"@type":"Brand","name":"Kamogelo Retail"},
+    "sameAs":["https://instagram.com/yourhandle"]
+  }
+  </script>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="container nav">
+      <a href="#" class="brand">
+        <img src="assets/logo.png" alt="Kamogelo Retail logo" onerror="this.style.display='none'">
+        <h1>Kamogelo Retail</h1>
+      </a>
+      <nav class="links">
+        <a class="btn hide-sm" href="#products">Products</a>
+        <a class="btn hide-sm" href="#shipping">Shipping</a>
+        <a class="btn hide-sm" href="#faq">FAQ</a>
+        <a class="btn cta" id="whatsBtn" href="#">Order on WhatsApp</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="container hero-wrap">
+      <div>
+        <span class="badge">🇿🇦 SA Orders • 🇨🇳 Imports</span>
+        <h2 class="h-title">Trending imports delivered to your door in <span style="color:var(--accent)">15–20</span> working days.</h2>
+        <p class="h-sub">We source useful, high-quality products from China and handle everything—secure ordering, tracking, and support on WhatsApp.</p>
+        <div class="chips">
+          <span class="chip">Pay via EFT/Card</span>
+          <span class="chip">Order updates on WhatsApp</span>
+          <span class="chip">Referral discounts</span>
+        </div>
+
+        <!-- Referral -->
+        <div class="referral">
+          <form id="refForm">
+            <input id="refInput" type="text" placeholder="Have a referral code or name? Enter it" />
+            <button type="submit">Save referral</button>
+          </form>
+          <p class="tiny" id="refNote">Tip: Share your code/name with friends. You’ll get rewards when they buy.</p>
+        </div>
+      </div>
+      <div class="card phone">
+        <!-- Replace with a lifestyle image of your products -->
+        <img src="assets/hero.jpg" alt="Kamogelo Retail products" />
+      </div>
+    </div>
+  </section>
+
+  <!-- Products -->
+  <section id="products">
+    <div class="container">
+      <h3 class="sec-title">Featured Products</h3>
+      <p class="tiny" style="margin-bottom:16px">Tap “Order on WhatsApp” to pre-fill your order message. Prices include taxes; shipping shown at checkout.</p>
+      <div class="grid products" id="productGrid"></div>
+    </div>
+  </section>
+
+  <!-- Info / USP -->
+  <section id="shipping">
+    <div class="container">
+      <div class="grid info-grid">
+        <div class="card info-card">
+          <h4>Delivery & Tracking</h4>
+          <p class="tiny">Delivery takes <b>15–20 working days</b>. You’ll receive a tracking link and updates on WhatsApp.</p>
+        </div>
+        <div class="card info-card">
+          <h4>Returns & Support</h4>
+          <p class="tiny">Wrong or damaged item? Message us within 7 days of delivery for a replacement or refund.</p>
+        </div>
+        <div class="card info-card">
+          <h4>Referral Rewards</h4>
+          <p class="tiny">New customers get <b>10% off</b> with a valid referral code. Referrers earn <b>R50 credit</b> after a successful order.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq">
+    <div class="container">
+      <h3 class="sec-title">FAQ</h3>
+      <div class="grid" style="grid-template-columns:1fr 1fr; gap:12px">
+        <details open><summary>How do I order?</summary><p class="tiny">Click “Order on WhatsApp”, send us your color/size and address, and we’ll confirm your order & payment method.</p></details>
+        <details><summary>How long is delivery?</summary><p class="tiny">Typically 15–20 <b>working</b> days from payment. We’ll keep you updated.</p></details>
+        <details><summary>What about customs?</summary><p class="tiny">We factor this into our logistics. If anything changes, we’ll notify you before shipping.</p></details>
+        <details><summary>What are the payment options?</summary><p class="tiny">EFT, card link, or approved cash-on-delivery in select areas.</p></details>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container foot">
+      <div style="display:flex;align-items:center;gap:10px">
+        <img src="assets/logo.png" alt="" style="height:28px;border-radius:6px" onerror="this.style.display='none'">
+        <span>© <span id="yr"></span> Kamogelo Retail</span>
+      </div>
+      <div class="links legal">
+        <a href="#" id="policyBtn">Returns</a>
+        <a href="#" id="privacyBtn">Privacy</a>
+        <a href="https://instagram.com/yourhandle" rel="noopener" target="_blank">Instagram</a>
+        <a href="#" id="whatsBtn2" class="btn cta">Order on WhatsApp</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Simple policy modals -->
+  <dialog id="policyModal" style="max-width:700px;background:#0d142a;color:#e5eaf7;border:1px solid rgba(255,255,255,.12);border-radius:12px">
+    <h3>Returns & Refunds</h3>
+    <p class="tiny">Report any issues within 7 days of delivery with photos/video. We’ll arrange a replacement or refund after assessment.</p>
+    <form method="dialog"><button class="btn">Close</button></form>
+  </dialog>
+
+  <dialog id="privacyModal" style="max-width:700px;background:#0d142a;color:#e5eaf7;border:1px solid rgba(255,255,255,.12);border-radius:12px">
+    <h3>Privacy Policy</h3>
+    <p class="tiny">We only store details needed to fulfill your order (name, contact, address). We don’t sell your data. Opt-out anytime via WhatsApp.</p>
+    <form method="dialog"><button class="btn">Close</button></form>
+  </dialog>
+
+  <script>
+    // -------- CONFIG --------
+    const WHATSAPP_NUMBER = "27600000000"; // <- your full international number (no +)
+    const IG_HANDLE = "yourhandle";
+
+    // Example products (edit freely)
+    const PRODUCTS = [
+      {
+        id:"mini-iron",
+        title:"Mini Portable Iron",
+        price:"R249",
+        was:"R299",
+        img:"assets/p1.jpg",
+        tagline:"Travel-ready, heats in 20s"
+      },
+      {
+        id:"car-vac",
+        title:"Wireless Car Vacuum",
+        price:"R499",
+        was:"R599",
+        img:"assets/p2.jpg",
+        tagline:"Powerful + compact"
+      },
+      {
+        id:"led-mirror",
+        title:"LED Vanity Mirror",
+        price:"R699",
+        was:"R849",
+        img:"assets/p3.jpg",
+        tagline:"Dimmable, USB-powered"
+      },
+      {
+        id:"pet-hair",
+        title:"Pet Hair Remover",
+        price:"R199",
+        was:"R249",
+        img:"assets/p4.jpg",
+        tagline:"Reusable, no refills"
+      },
+      {
+        id:"kitchen-pro",
+        title:"5-in-1 Kitchen Slicer",
+        price:"R329",
+        was:"R399",
+        img:"assets/p5.jpg",
+        tagline:"Faster food prep"
+      },
+      {
+        id:"massage-gun",
+        title:"Deep Tissue Massage Gun",
+        price:"R1,099",
+        was:"R1,299",
+        img:"assets/p6.jpg",
+        tagline:"4 heads, 6 speeds"
+      }
+    ];
+
+    // -------- UTIL --------
+    const qs = (s, el=document)=>el.querySelector(s);
+    const elGrid = qs('#productGrid');
+    const thisYear = new Date().getFullYear();
+    qs('#yr').textContent = thisYear;
+
+    // Referral handling (query ?ref=NAME or manual entry)
+    const urlRef = new URLSearchParams(location.search).get('ref') || '';
+    const savedRef = localStorage.getItem('kamogelo_ref') || '';
+    const startingRef = urlRef || savedRef || '';
+    if (startingRef) {
+      qs('#refInput').value = startingRef;
+      localStorage.setItem('kamogelo_ref', startingRef);
+      qs('#refNote').textContent = `Referral saved: ${startingRef}. New customers get 10% off.`;
+    }
+    qs('#refForm').addEventListener('submit', e=>{
+      e.preventDefault();
+      const v = qs('#refInput').value.trim();
+      if(!v){alert("Enter a referral name/code");return;}
+      localStorage.setItem('kamogelo_ref', v);
+      qs('#refNote').textContent = `Referral saved: ${v}. It will be added to your WhatsApp order.`;
+    });
+
+    function waLink(message){
+      const ref = localStorage.getItem('kamogelo_ref');
+      const full = ref ? `${message}\nReferral: ${ref}` : message;
+      return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(full)}`;
+    }
+
+    // Build product cards
+    function renderProducts(){
+      elGrid.innerHTML = PRODUCTS.map(p=>`
+        <article class="card product">
+          <div class="p-img"><img src="${p.img}" alt="${p.title}"></div>
+          <div class="p-body">
+            <h4 class="p-title">${p.title}</h4>
+            <p class="tiny">${p.tagline}</p>
+            <div class="price"><b>${p.price}</b> <span class="tiny" style="text-decoration:line-through;opacity:.7">${p.was || ""}</span> <span class="badge-warn">15–20 working days</span></div>
+          </div>
+          <div class="p-actions" style="padding:0 12px 14px">
+            <a class="btn primary" href="${waLink(`Hi, I'd like to order: ${p.title} (${p.id}). Price ${p.price}. Please assist with size/colour & delivery.`)}" target="_blank" rel="noopener">Order on WhatsApp</a>
+            <button class="btn ghost" onclick="copyShare('${p.title}')">Share</button>
+          </div>
+        </article>
+      `).join('');
+    }
+    renderProducts();
+
+    // Header buttons
+    function defaultMessage(){
+      return waLink("Hi Kamogelo Retail 👋 I'd like help placing an order.");
+    }
+    const headerBtns = [qs('#whatsBtn'), qs('#whatsBtn2')];
+    headerBtns.forEach(b=> b && (b.href = defaultMessage()));
+
+    // Share helper
+    async function copyShare(name){
+      const text = `${name} — order from Kamogelo Retail: ${location.origin}${location.pathname}`;
+      try{
+        await navigator.clipboard.writeText(text);
+        alert("Link copied. Share it on WhatsApp/Instagram!");
+      }catch(e){
+        alert("Copied text:\n"+text);
+      }
+    }
+
+    // Simple policy modals
+    qs('#policyBtn').addEventListener('click', e=>{e.preventDefault();qs('#policyModal').showModal();});
+    qs('#privacyBtn').addEventListener('click', e=>{e.preventDefault();qs('#privacyModal').showModal();});
+  </script>
+</body>
+</html>
